@@ -48,7 +48,7 @@ public class GroundTransportation extends Transport
     
     @Override
    public String toString() {
-        return super.toString() + "Transporte: " + this.licensePlate;
+        return super.toString() + "Matrícula: " + this.licensePlate;
     }
 
 }
