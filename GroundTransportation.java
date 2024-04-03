@@ -10,7 +10,7 @@ public class GroundTransportation extends Transport
     // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
     private String licensePlate;
     // variável fixa de percentagem de taxa.
-    static final float HONORARY_PERCENTAGE = 3f;
+    private static final float HONORARY_PERCENTAGE = 3f;
 
     /**
      * Construtor para objetos da classe GroundTransportation
@@ -20,6 +20,19 @@ public class GroundTransportation extends Transport
         super();
         this.licensePlate = "";
     }
-
+    
+    public GroundTransportation(String licensePlate)
+    {
+        super();
+        this.licensePlate = licensePlate;
+    }
+    
+    public String getLicensePlate(){
+        return licensePlate;
+    }
+    
+    public void setLicensePlate(String licensePlate){
+        this.licensePlate = licensePlate;
+    }
 
 }
