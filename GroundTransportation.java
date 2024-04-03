@@ -18,6 +18,7 @@ public class GroundTransportation extends Transport
     public GroundTransportation()
     {
         super();
+        super.setFees(HONORARY_PERCENTAGE);
         this.licensePlate = "";
     }
     
@@ -33,6 +34,21 @@ public class GroundTransportation extends Transport
     
     public void setLicensePlate(String licensePlate){
         this.licensePlate = licensePlate;
+    }
+    
+    @Override
+    public double getPriceWithFees(){
+        return super.getPrice() * (1.0 + (super.getFees() * 0.01));
+    }
+    
+    @Override
+    public String getTransportType() {
+        return "Transporte Terrestre";
+    }
+    
+    @Override
+   public String toString() {
+        return super.toString() + "Matrícula: " + this.licensePlate;
     }
 
 }
